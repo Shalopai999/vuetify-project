@@ -13,13 +13,6 @@
       </div>
     </div>
   </div>
-  <div class="container-category__breadcrumb">
-    <v-breadcrumbs :items="items">
-      <template v-slot:divider>
-        <v-icon icon="mdi-chevron-right"></v-icon>
-      </template>
-    </v-breadcrumbs>
-  </div>
   <v-app>
     <v-main>
       <router-view />
@@ -29,18 +22,7 @@
 </template>
 
 <script setup>
-const items = [
-  {
-    title: 'Главная',
-    disabled: false,
-    href: 'http://localhost:3000/',
-  },
-  {
-    title: 'Каталог',
-    disabled: false,
-    href: 'http://localhost:3000/catalog',
-  },
-]
+
 </script>
 
 <style scoped lang="scss">

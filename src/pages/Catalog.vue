@@ -1,5 +1,8 @@
 <template>
     <div class="container-category">
+        <!-- <div class="container-category__breadcrumb"> -->
+            <Breadcrumb />
+        <!-- </div> -->
         <div class="subcategory">
             <h1 class="subcategory__title">Каталог товаров</h1>
             <div class="subcategory__item-container">
@@ -35,14 +38,22 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </template>
 
-<script>
-
+<script setup>
+const items = [
+    {
+        title: 'Главная',
+        disabled: false,
+        href: '/',
+    },
+    {
+        title: 'Каталог',
+        disabled: true,
+        href: '/catalog',
+    },
+]
 </script>
 
 <style scoped lang="scss">
