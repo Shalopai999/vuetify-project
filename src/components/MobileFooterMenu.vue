@@ -16,13 +16,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/" class="menu-nav__link">
+                        <a href="/catalog" class="menu-nav__link">
                             <v-icon color="#afafaf" icon="mdi-format-align-left" size="large"></v-icon>
                             <span class="menu-nav__title">Каталог</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/" class="menu-nav__link">
+                        <a href="/cart" class="menu-nav__link">
                             <v-icon color="#afafaf" icon="mdi-cart-outline" size="large"></v-icon>
                             <span class="menu-nav__title">Корзина</span>
                         </a>

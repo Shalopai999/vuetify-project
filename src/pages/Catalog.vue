@@ -1,19 +1,44 @@
 <template>
-    <div class="header">
-        <div class="header-mobile">
-            <div class="header-mobile__back">
-                <v-icon color="#afafaf" icon="mdi-arrow-left" size="large"></v-icon>
+    <div class="container-category">
+        <div class="subcategory">
+            <h1 class="subcategory__title">Каталог товаров</h1>
+            <div class="subcategory__item-container">
+                <div class="subcategory__item">
+                    <label class="subcategory__item__mobile-title" for="Бытовая техника">
+                        <v-icon color="#afafaf" icon="mdi-stove" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">Бытовая техника</div>
+                    </label>
+                </div>
+                <div class="subcategory__item">
+                    <label class="subcategory__item__mobile-title" for="Смартфоны">
+                        <v-icon color="#afafaf" icon="mdi-cellphone" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">Смартфоны</div>
+                    </label>
+                </div>
+                <div class="subcategory__item">
+                    <label class="subcategory__item__mobile-title" for="ТВ">
+                        <v-icon color="#afafaf" icon="mdi-television" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">ТВ</div>
+                    </label>
+                </div>
+                <div class="subcategory__item">
+                    <label class="subcategory__item__mobile-title" for="ПК">
+                        <v-icon color="#afafaf" icon="mdi-laptop" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">ПК</div>
+                    </label>
+                </div>
+                <div class="subcategory__item">
+                    <label class="subcategory__item__mobile-title" for="Офис">
+                        <v-icon color="#afafaf" icon="mdi-printer-outline" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">Офис</div>
+                    </label>
+                </div>
             </div>
-            <div class="header-mobile__search">
-                <v-icon color="#afafaf" icon="mdi-magnify" size="large"></v-icon>
-                <input class="header-mobile__input" type="text" placeholder="Поиск по сайту">
-            </div>
-            <div class="header-mobile__notification">
-                <v-icon color="#afafaf" icon="mdi-bell-outline" size="large"></v-icon>
-            </div>
-
         </div>
+
+
     </div>
+
 </template>
 
 <script>
@@ -21,56 +46,29 @@
 </script>
 
 <style scoped lang="scss">
-.header {
-    min-height: 60px;
-    box-shadow: 0 1px 4px #00000029;
+.container-category {
+    padding: 12px 16px;
 }
 
-.header-mobile {
-
-    min-height: 60px;
-    padding: 12px 16px;
-    gap: 8px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    &__back {
-        width: 36px;
-        height: 36px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        background-color: #f7f7f7;
-        flex-shrink: 0;
+.subcategory {
+    &__title {
+        margin-left: 4px;
     }
 
-    &__search {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 36px;
-        padding: 0px 8px 0px 8px;
-        border-radius: 8px;
-        background-color: #f7f7f7;
-    }
+    &__item {
+        &__mobile-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 16px 28px 16px 12px;
+            background-color: white;
+            margin: 4px;
+        }
 
-    &__input {
-        width: 100%;
-        padding: 0px 8px 0px 8px;
-    }
-
-    &__notification {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        background-color: #f7f7f7;
-        width: 36px;
-        height: 36px;
-        flex-shrink: 0;
+        &__mobile-name {
+            margin-left: 16px;
+        }
     }
 }
 </style>
