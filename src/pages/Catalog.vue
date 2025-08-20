@@ -1,8 +1,6 @@
 <template>
     <div class="container-category">
-        <!-- <div class="container-category__breadcrumb"> -->
-            <Breadcrumb />
-        <!-- </div> -->
+            <Breadcrumb :breadcrumbItems="breadcrumbItems"/>
         <div class="subcategory">
             <h1 class="subcategory__title">Каталог товаров</h1>
             <div class="subcategory__item-container">
@@ -42,7 +40,7 @@
 </template>
 
 <script setup>
-const items = [
+const breadcrumbItems = [
     {
         title: 'Главная',
         disabled: false,

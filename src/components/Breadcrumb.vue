@@ -1,6 +1,6 @@
 <template>
     <div class="container-category__breadcrumb">
-        <v-breadcrumbs :items="items">
+        <v-breadcrumbs :items="breadcrumbItems">
             <template v-slot:divider>
                 <v-icon icon="mdi-chevron-right"></v-icon>
             </template>
@@ -9,4 +9,5 @@
 </template>
 
 <script setup>
+defineProps(['breadcrumbItems']);
 </script>

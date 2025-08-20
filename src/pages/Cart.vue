@@ -1,13 +1,11 @@
 <template>
-    <!-- <div class="container-category__breadcrumb"> -->
-        <Breadcrumb />
-    <!-- </div> -->
+        <Breadcrumb  :breadcrumbItems="breadcrumbItems"/>
     <h1>CART</h1>
 </template>
 
 <script setup>
 
-const items = [
+const breadcrumbItems = [
     {
         title: 'Главная',
         disabled: false,
