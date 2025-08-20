@@ -1,37 +1,13 @@
 <template>
     <div class="container-category">
-            <Breadcrumb :breadcrumbItems="breadcrumbItems"/>
+        <Breadcrumb :breadcrumbItems="breadcrumbItems" />
         <div class="subcategory">
             <h1 class="subcategory__title">Каталог товаров</h1>
             <div class="subcategory__item-container">
                 <div class="subcategory__item">
-                    <label class="subcategory__item__mobile-title" for="Бытовая техника">
-                        <v-icon color="#afafaf" icon="mdi-stove" size="large"></v-icon>
-                        <div class="subcategory__item__mobile-name">Бытовая техника</div>
-                    </label>
-                </div>
-                <div class="subcategory__item">
-                    <label class="subcategory__item__mobile-title" for="Смартфоны">
-                        <v-icon color="#afafaf" icon="mdi-cellphone" size="large"></v-icon>
-                        <div class="subcategory__item__mobile-name">Смартфоны</div>
-                    </label>
-                </div>
-                <div class="subcategory__item">
-                    <label class="subcategory__item__mobile-title" for="ТВ">
-                        <v-icon color="#afafaf" icon="mdi-television" size="large"></v-icon>
-                        <div class="subcategory__item__mobile-name">ТВ</div>
-                    </label>
-                </div>
-                <div class="subcategory__item">
-                    <label class="subcategory__item__mobile-title" for="ПК">
-                        <v-icon color="#afafaf" icon="mdi-laptop" size="large"></v-icon>
-                        <div class="subcategory__item__mobile-name">ПК</div>
-                    </label>
-                </div>
-                <div class="subcategory__item">
-                    <label class="subcategory__item__mobile-title" for="Офис">
-                        <v-icon color="#afafaf" icon="mdi-printer-outline" size="large"></v-icon>
-                        <div class="subcategory__item__mobile-name">Офис</div>
+                    <label v-for="item in catalog" class="subcategory__item__mobile-title" :for="item.name">
+                        <v-icon color="#afafaf" :icon="item.icon" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">{{ item.name }}</div>
                     </label>
                 </div>
             </div>
@@ -40,6 +16,25 @@
 </template>
 
 <script setup>
+import { reactive, ref } from 'vue';
+
+const catalog = ref([{
+    name: 'Бытовая техника',
+    icon: 'mdi-stove'
+}, {
+    name: 'Смартфоны',
+    icon: 'mdi-cellphone'
+}, {
+    name: 'ТВ',
+    icon: 'mdi-television'
+}, {
+    name: 'ПК',
+    icon: 'mdi-laptop'
+}, {
+    name: 'Офис',
+    icon: 'mdi-printer-outline'
+}])
+
 const breadcrumbItems = [
     {
         title: 'Главная',
@@ -52,6 +47,7 @@ const breadcrumbItems = [
         href: '/catalog',
     },
 ]
+
 </script>
 
 <style scoped lang="scss">
