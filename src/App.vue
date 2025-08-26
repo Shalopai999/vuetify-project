@@ -18,6 +18,7 @@
       <router-view />
     </v-main>
   </v-app>
+  <Footer />
   <MobileFooterMenu />
 </template>
 

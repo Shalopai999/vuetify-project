@@ -5,9 +5,9 @@
             <h1 class="subcategory__title">Каталог товаров</h1>
             <div class="subcategory__item-container">
                 <div class="subcategory__item">
-                    <label v-for="item in catalog" class="subcategory__item__mobile-title" :for="item.name">
-                        <v-icon color="#afafaf" :icon="item.icon" size="large"></v-icon>
-                        <div class="subcategory__item__mobile-name">{{ item.name }}</div>
+                    <label v-for="item in catalog" class="subcategory__item__mobile-title" :for="item.categoryName">
+                        <v-icon color="#afafaf" :icon="item.iconName" size="large"></v-icon>
+                        <div class="subcategory__item__mobile-name">{{ item.categoryName }}</div>
                     </label>
                 </div>
             </div>
@@ -19,20 +19,20 @@
 import { reactive, ref } from 'vue';
 
 const catalog = ref([{
-    name: 'Бытовая техника',
-    icon: 'mdi-stove'
+    categoryName: 'Бытовая техника',
+    iconName: 'mdi-stove'
 }, {
-    name: 'Смартфоны',
-    icon: 'mdi-cellphone'
+    categoryName: 'Смартфоны',
+    iconName: 'mdi-cellphone'
 }, {
-    name: 'ТВ',
-    icon: 'mdi-television'
+    categoryName: 'ТВ',
+    iconName: 'mdi-television'
 }, {
-    name: 'ПК',
-    icon: 'mdi-laptop'
+    categoryName: 'ПК',
+    iconName: 'mdi-laptop'
 }, {
-    name: 'Офис',
-    icon: 'mdi-printer-outline'
+    categoryName: 'Офис',
+    iconName: 'mdi-printer-outline'
 }])
 
 const breadcrumbItems = [

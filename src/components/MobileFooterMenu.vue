@@ -3,34 +3,10 @@
         <div class="mobile-footer-menu">
             <nav class="menu-nav">
                 <ul class="menu-nav__list">
-                    <li class="menu-nav__item">
-                        <a href="/" class="menu-nav__link">
-                            <v-icon color="#afafaf" icon="mdi-home-outline" size="large"></v-icon>
-                            <span class="menu-nav__title">Главная</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/" class="menu-nav__link">
-                            <v-icon color="#afafaf" icon="mdi-map-marker-outline" size="large"></v-icon>
-                            <span class="menu-nav__title">Магазины</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/catalog" class="menu-nav__link">
-                            <v-icon color="#afafaf" icon="mdi-format-align-left" size="large"></v-icon>
-                            <span class="menu-nav__title">Каталог</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/cart" class="menu-nav__link">
-                            <v-icon color="#afafaf" icon="mdi-cart-outline" size="large"></v-icon>
-                            <span class="menu-nav__title">Корзина</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/" class="menu-nav__link">
-                            <v-icon color="#afafaf" icon="mdi-account-outline" size="large"></v-icon>
-                            <span class="menu-nav__title">Профиль</span>
+                    <li v-for="item in footerMenu" class="menu-nav__item">
+                        <a :href="item.link" class="menu-nav__link">
+                            <v-icon color="#afafaf" :icon="item.iconName" size="large"></v-icon>
+                            <span class="menu-nav__title">{{ item.menuItemName }}</span>
                         </a>
                     </li>
                 </ul>
@@ -39,7 +15,30 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { reactive, ref } from 'vue';
+
+const footerMenu = ref([{
+    menuItemName: 'Главная',
+    iconName: 'mdi-home-outline',
+    link: '/'
+}, {
+    menuItemName: 'Магазины',
+    iconName: 'mdi-map-marker-outline',
+    link: '/shops'
+}, {
+    menuItemName: 'Каталог',
+    iconName: 'mdi-format-align-left',
+    link: '/catalog'
+}, {
+    menuItemName: 'Корзина',
+    iconName: 'mdi-cart-outline',
+    link: '/cart'
+}, {
+    menuItemName: 'Профиль',
+    iconName: 'mdi-account-outline',
+    link: '/profile'
+}])
 
 </script>
 
