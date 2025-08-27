@@ -24,15 +24,12 @@
         </v-card>
         <div class="footer-contacts">
             <p class="footer-contacts__item">
-                <a class="footer-contacts__item-link" href="tel:8-800-2000-600">8-800-2000-600</a>
+                <a class="footer-contacts__item-link" href="tel:88002000600">8-800-2000-600</a>
             </p>
             <div class="footer-contacts__item">
-                <a class="footer-contacts__item-link" href="/shops">Адреса магазинов</a>
+                <div class="footer-contacts__item-link">Адрес: Пушкина 1</div>
             </div>
-            <div class="footer-contacts__copyright">© 2002–2025 Компания DNS. Администрация Сайта не несет
-                ответственности за
-                размещаемые
-                Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.</div>
+            <div class="footer-contacts__copyright">© 2025 Компания</div>
         </div>
     </div>
 </template>
@@ -67,11 +64,6 @@ const clientItems = [
     padding: 12px 16px;
 }
 
-v-list {
-    min-width: 300px;
-    max-width: 350px;
-}
-
 .footer-contacts {
     padding: 12px 16px;
 
@@ -82,7 +74,6 @@ v-list {
     &__item-link {
         color: #8c8c8c;
         text-decoration: none;
-        // padding: 12px 16px;
     }
 
     &__copyright {
